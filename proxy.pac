@@ -1,10 +1,4 @@
 function FindProxyForURL(url, host) {
-	if (host == 'ocsp.int-x3.letsencrypt.org' || host == 'ocsp.apple.com' || host == 'world-gen.g.aaplimg.com' || host 
-
-== 'mesu.apple.com' || host == 'gdmf.apple.com')
-	{
-	return 'PROXY 127.0.0.1:80';
-	}
 
 	if (host == 'music.163.com' || host == 'interface.music.163.com' || host == 'interface3.music.163.com' || host == 
 
@@ -18,8 +12,8 @@ function FindProxyForURL(url, host) {
 
 host == '103.126.92.132') 
 	{
-        return 'PROXY 106.52.127.72:19951';
+        return 'PROXY 106.52.127.72:19951;'
 	}
 	
-	return 'DIRECT';
+	return 'DIRECT;'
 }
