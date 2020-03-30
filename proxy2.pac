@@ -11,7 +11,7 @@ function ProxyForURL(url, host)
        dnsDomainIs(host,"iadsk.apple.com")||
        dnsDomainIs(host,"xp.apple.com")   ||
        dnsDomainIS(host,"swscan.apple.com"){
-        return "PROXY 10.0.0.1:2020";
+        return "PROXY 10.1.2.3:1234";
     }
     else {
         return "DIRECT";
