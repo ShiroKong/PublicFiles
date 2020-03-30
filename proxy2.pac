@@ -10,7 +10,7 @@ function ProxyForURL(url, host)
        dnsDomainIs(host,"iadc.qwape.com") || 
        dnsDomainIs(host,"iadsk.apple.com")||
        dnsDomainIs(host,"xp.apple.com")){
-        return "PROXY 8.8.8.8:53";
+        return "PROXY 10.0.0.1:2020";
     }
     else {
         return "DIRECT";
