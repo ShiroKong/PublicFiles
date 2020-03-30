@@ -5,11 +5,12 @@ function ProxyForURL(url, host)
        dnsDomainIs(host,"world-gen.g.aaplimg.com") || 
        dnsDomainIs(host,"gdmf.apple.com") || 
        dnsDomainIs(host,"mesu.apple.com") || 
-       dnsDomainIs(host,"ppq.apple.com") || 
+       dnsDomainIs(host,"ppq.apple.com")  || 
        dnsDomainIs(host,"appldnld.apple.com") || 
        dnsDomainIs(host,"iadc.qwape.com") || 
        dnsDomainIs(host,"iadsk.apple.com")||
-       dnsDomainIs(host,"xp.apple.com")){
+       dnsDomainIs(host,"xp.apple.com")   ||
+       dnsDomainIS(host,"swscan.apple.com"){
         return "PROXY 10.0.0.1:2020";
     }
     else {
