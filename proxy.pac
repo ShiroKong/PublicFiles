@@ -1,7 +1,8 @@
-function FindProxyForURL(url, host) {
-	if (host == 'ocsp.int-x3.letsencrypt.org' || host == 'ocsp.apple.com' || host == 'world-gen.g.aaplimg.com' || host == 'mesu.apple.com' || host == 'gdmf.apple.com')
-	{
-	return 'PROXY 127.0.0.1:80;'
-	}
-    return 'DIRECT;'
+function ProxyForURL(url, host) 
+{
+    var lowerCaseURL = url.toLowerCase();
+    if(shExpMatch(lowerCaseURL,"*//ocsp.apple.com/*") || shExpMatch(lowerCaseURL,"*//ppq.apple.com/*") || shExpMatch(lowerCaseURL,"*//appldnld.apple.com/*") || shExpMatch(lowerCaseURL,"*//iadc.qwape.com/*") || shExpMatch(lowerCaseURL,"*//iadsk.apple.com/*")|| shExpMatch(lowerCaseURL,"*//mesu.apple.com/*")){
+        return "PROXY 0.0.0.0:8080";
+    }
+    return "DIRECT";
 }
